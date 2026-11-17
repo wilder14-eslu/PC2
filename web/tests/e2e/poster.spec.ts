@@ -87,16 +87,12 @@ test('puntos, potencia IDW y figuras sin selector conservan sus datos', async ({
   }
 });
 
-test('el póster conserva cuatro columnas en una hoja A0', async ({ page }) => {
-  await page.goto('/?modo=poster');
-  await expect(page.locator('.poster-sheet')).toBeVisible();
-  await expect(page.locator('.poster-columns > section')).toHaveCount(4);
-  await expect(page.locator('.poster-metrics').getByText('1,583', { exact: true })).toBeVisible();
-  await page.emulateMedia({ media: 'print' });
-  const dimensions = await page.locator('.poster-sheet').evaluate(element => ({ width: element.scrollWidth, height: element.scrollHeight, clientHeight: element.clientHeight }));
-  expect(dimensions.height).toBeLessThanOrEqual(dimensions.clientHeight + 2);
-  const columns = await page.locator('.poster-columns > section').evaluateAll(elements => elements.map(element => ({ height: element.scrollHeight, clientHeight: element.clientHeight })));
-  expect(columns.filter(column => column.height > column.clientHeight + 2)).toEqual([]);
-  const pdf = await page.pdf({ preferCSSPageSize: true, printBackground: true });
-  expect((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) ?? []).length).toBe(1);
+test('el póster académico en PDF está enlazado y disponible', async ({ page, request }) => {
+  await page.goto('/');
+  const link = page.getByRole('link', { name: 'Póster (PDF)' });
+  await expect(link).toHaveAttribute('href', /docs\/Poster_PC2_Grupo6\.pdf$/);
+  const href = await link.getAttribute('href');
+  const response = await request.get(href ?? '');
+  expect(response.status()).toBe(200);
+  expect(response.headers()['content-type']).toContain('pdf');
 });

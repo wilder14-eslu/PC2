@@ -23,7 +23,7 @@ export function NavBar() {
       <button className="nav-toggle" type="button" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>Secciones <span aria-hidden="true">{open ? '×' : '☰'}</span></button>
       <nav id="main-navigation" className={`site-nav ${open ? 'is-open' : ''}`} aria-label="Secciones del estudio">
         {links.map(([id, label]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={() => setOpen(false)}>{label}</a>)}
-        <a className="nav-poster" href="?modo=poster">Modo póster</a>
+        <a className="nav-poster" href={`${import.meta.env.BASE_URL}docs/Poster_PC2_Grupo6.pdf`} target="_blank" rel="noopener noreferrer">Póster (PDF)</a>
       </nav>
     </div></header>
   </>;

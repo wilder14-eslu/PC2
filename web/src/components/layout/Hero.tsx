@@ -22,7 +22,7 @@ export function Hero() {
       <h1>Difusión global y estimación espacial del COVID-19</h1>
       <p className="hero-subtitle">Análisis geoestadístico en Europa con Kriging y Cokriging</p>
       <div className="hero-meta"><p><strong>Integrantes</strong><br />Gabriel Briceño Ypanaque · Wilder Espinoza Luna · Vicente Isase Camara · Oscar Montoya Juro · Gerson Pablo Machaca · Frank Polastre Mamani</p><p><strong>Docente</strong><br />Dr. Misael Erikson Maguiña Palma<br />17 de noviembre de 2026</p></div>
-      <div className="hero-actions"><a className="hero-action" href="#resumen">Explorar el estudio <span aria-hidden="true">↓</span></a><a className="hero-action secondary" href={`${import.meta.env.BASE_URL}docs/main.pdf`} download>Descargar informe</a></div>
+      <div className="hero-actions"><a className="hero-action" href="#resumen">Explorar el estudio <span aria-hidden="true">↓</span></a><a className="hero-action secondary" href={`${import.meta.env.BASE_URL}docs/main.pdf`} download>Descargar informe</a><a className="hero-action secondary" href={`${import.meta.env.BASE_URL}docs/Poster_PC2_Grupo6.pdf`} target="_blank" rel="noopener noreferrer">Ver póster</a></div>
     </div></section>
     <div className="kpi-strip wrap" aria-label="Indicadores principales del estudio">
       {error && <p role="alert">No se pudieron cargar los indicadores del estudio.</p>}
