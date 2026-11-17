@@ -4,3 +4,4 @@ playwright-report/
 test-results/
 *.tsbuildinfo
 .lighthouseci/
+/TAREAS_PENDIENTES.md
