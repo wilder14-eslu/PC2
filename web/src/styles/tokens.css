@@ -1,0 +1,22 @@
+:root {
+  --brand-900: #0f2240;
+  --brand-700: #1f3a68;
+  --brand-500: #3c5f96;
+  --brand-100: #e6ecf5;
+  --gold-500: #c9a227;
+  --ink-900: #1a1d23;
+  --ink-600: #545b66;
+  --ink-300: #c4c9d1;
+  --paper: #fff;
+  --canvas: #f6f7f9;
+  --ok: #2e7d5b;
+  --warn: #b26a00;
+  --risk: #b42318;
+  --shadow-card: 0 1px 2px rgb(15 34 64 / 6%), 0 4px 16px rgb(15 34 64 / 6%);
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --ease-standard: cubic-bezier(.2, .7, .2, 1);
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-code: 'JetBrains Mono', monospace;
+}

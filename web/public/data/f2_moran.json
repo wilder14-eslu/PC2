@@ -1,0 +1,1 @@
+[{"Variable":"ln(Confirmed+1)","I":0.0856,"E[I]":-0.0244,"z (perm.)":1.2788,"p (perm.)":0.113},{"Variable":"ln(Deaths+1)","I":0.139,"E[I]":-0.0244,"z (perm.)":1.8969,"p (perm.)":0.05},{"Variable":"ln(incidencia/100k)","I":0.1078,"E[I]":-0.0244,"z (perm.)":1.5287,"p (perm.)":0.078}]

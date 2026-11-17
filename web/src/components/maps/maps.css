@@ -1,0 +1,25 @@
+.geo-map { width: 100%; min-height: 24rem; height: min(55vh, 33rem); background: var(--canvas); border: 1px solid var(--ink-300); border-radius: 8px; overflow: hidden; }
+.map-module__controls { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+.map-module__legend { margin: .75rem 0; color: var(--ink-600); font-size: .875rem; }
+.map-module__gradient { display: block; max-width: 18rem; height: .75rem; border-radius: 999px; background: linear-gradient(90deg, #ffffcc, #fd8d3c, #800026); }
+.map-module__gradient--uncertainty { background: linear-gradient(90deg, #fcfbfd, #9e9ac8, #3f007d); }
+.map-module__gradient--deaths { background: linear-gradient(90deg, #fff5f0, #fb6a4a, #67000d); }
+.map-module__table { display: block; max-width: 100%; overflow: auto; max-height: 22rem; }
+.map-module__table table { border-collapse: collapse; width: 100%; font-size: .875rem; }
+.map-module__table th, .map-module__table td { text-align: left; border-bottom: 1px solid var(--ink-300); padding: .45rem .6rem; white-space: nowrap; }
+.map-module__country { background: var(--brand-100); border-radius: 8px; padding: 1rem; margin: .75rem 0; }
+.map-module__country dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .5rem 1rem; }
+.map-module__country dd { margin: 0; font-weight: 600; }
+.map-compare { position: relative; overflow: hidden; }
+.map-compare__overlay { position: absolute; inset: 0; pointer-events: none; }
+.map-compare__labels { display: flex; justify-content: space-between; font-weight: 600; }
+.map-compare__range { width: 100%; }
+.map-module__placeholder { min-height: 24rem; display: grid; place-items: center; background: var(--canvas); }
+.map-idw-bars { display: grid; gap: .35rem; font-size: .8rem; max-width: 32rem; }
+.map-idw-bars > div { display: grid; grid-template-columns: 4.5rem 1fr 3.5rem; align-items: center; gap: .5rem; }
+.map-idw-bars__track { height: .65rem; background: var(--brand-100); border-radius: 1rem; }
+.map-idw-bars__track > span { display: block; height: 100%; background: var(--brand-500); border-radius: inherit; }
+.map-idw-bars__selected { font-weight: 700; }
+.map-idw-bars__selected .map-idw-bars__track > span { background: var(--brand-900); }
+@media (max-width: 767px) { .geo-map { height: 70vh; min-height: 20rem; } }
+@media print { .map-module__controls, .map-compare__range, .map-module__country { display: none; } .geo-map { height: 45mm; min-height: 0; } }

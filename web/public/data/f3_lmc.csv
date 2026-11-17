@@ -1,0 +1,4 @@
+Componente,Nugget (B0),Meseta parcial (B1),Alcance a (km),Modelo
+γ11 Confirmed,0.0001,2.8994,392.9713,Gaussiano
+γ12 cruzado,0.0001,3.5702,392.9713,Gaussiano
+γ22 Deaths,0.0001,4.8003,392.9713,Gaussiano

@@ -1,0 +1,35 @@
+@page { size: 1189mm 841mm; margin: 0; }
+.poster-stage { background: var(--canvas); min-height: 100vh; overflow: auto; }
+.poster-actions { display: flex; justify-content: flex-end; gap: 1rem; padding: 1rem; }
+.poster-actions button, .poster-actions a { padding: .65rem 1rem; border: 1px solid var(--ink-300); border-radius: 8px; color: var(--brand-700); background: white; font: inherit; }
+.poster-sheet { box-sizing: border-box; width: 1189mm; height: 841mm; padding: 13mm 16mm 10mm; display: grid; grid-template-rows: 105mm minmax(0, 1fr) 68mm; gap: 8mm; overflow: hidden; color: var(--ink-900); background: var(--paper); font: 24pt/1.3 var(--font-body); }
+.poster-sheet * { box-sizing: border-box; }
+.poster-header { display: grid; grid-template-columns: 65mm 1fr; align-items: center; gap: 12mm; padding: 5mm 8mm; color: white; background: var(--brand-900); }
+.poster-header img { width: 60mm; height: 60mm; object-fit: contain; }
+.poster-header h1 { margin: 0; color: white; font: 600 72pt/1.05 var(--font-display); }
+.poster-header p { margin: 1mm 0; font-size: 19pt; }
+.poster-header .poster-subtitle { font-size: 32pt; }
+.poster-columns { min-height: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10mm; overflow: hidden; }
+.poster-columns > section { min-width: 0; padding-right: 5mm; border-right: 1px solid var(--ink-300); overflow: hidden; }
+.poster-columns > section:last-child { border: 0; padding-right: 0; }
+.poster-sheet h2 { margin: 0 0 3mm; padding-top: 3mm; border-top: 2mm solid var(--gold-500); color: var(--brand-900); font: 600 42pt/1.1 var(--font-display); }
+.poster-sheet h3 { margin: 3mm 0 1mm; color: var(--brand-700); font: 600 25pt/1.2 var(--font-body); }
+.poster-sheet p { margin: 1mm 0 3mm; font-size: 19pt; line-height: 1.28; }
+.poster-figure { margin: 2mm 0 4mm; break-inside: avoid; }
+.poster-figure figcaption { font-size: 17pt; font-weight: 600; }
+.poster-figure img { display: block; width: 100%; max-height: 99mm; object-fit: contain; object-position: left center; }
+.poster-columns section:nth-child(2) .poster-figure img { max-height: 94mm; }
+.poster-sheet table { width: 100%; font: 16pt/1.2 var(--font-body); }
+.poster-sheet th, .poster-sheet td { padding: 1.5mm; }
+.poster-references p { font-size: 13pt; }
+.poster-footer { display: flex; align-items: stretch; gap: 6mm; padding-top: 4mm; border-top: 2mm solid var(--gold-500); }
+.poster-metrics { display: grid; flex: 1; grid-template-columns: repeat(6, 1fr); gap: 4mm; }
+.poster-metrics > div { padding: 3mm; background: var(--brand-100); }
+.poster-metrics strong, .poster-metrics span { display: block; }
+.poster-metrics strong { color: var(--brand-900); font: 600 32pt/1.1 var(--font-display); }
+.poster-metrics span { margin-top: 2mm; font-size: 16pt; }
+.poster-codes { display: flex; gap: 3mm; }
+.poster-qr { width: 51mm; margin: 0; text-align: center; }
+.poster-qr svg { width: 42mm; height: 42mm; }
+.poster-qr figcaption { font-size: 12pt; }
+@media print { html, body, #root { margin: 0; width: 1189mm; height: 841mm; } .poster-stage { overflow: visible; background: white; } .poster-actions { display: none; } .poster-sheet { print-color-adjust: exact; -webkit-print-color-adjust: exact; break-after: avoid; } }
